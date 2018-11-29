@@ -16,6 +16,7 @@ public class  App {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Enter your phone number:");
         String y = sc.nextLine();
+        //test
         geust1.setMobileNumber(y);
         //System.out.println("Your telephone number is  "+ geust1.getMobileNumber());
         Scanner sc2 = new Scanner (System.in);
