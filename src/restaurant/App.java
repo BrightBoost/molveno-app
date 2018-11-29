@@ -19,10 +19,27 @@ public class  App {
         geust1.setMobileNumber(y);
         System.out.println("Your telephone number is  "+ geust1.getMobileNumber());
         Scanner sc2 = new Scanner (System.in);
-        System.out.println ("For how many persons?");
-        int z = sc2.nextInt();
-        table1.setNumberOfChairs(z);
-        System.out.println("Number of persons are " + table1.getNumberOfChairs());
+        int z;
+
+            System.out.println("For how many poeple?");
+
+while (!sc2.hasNextInt()) {
+    System.out.println("Please enter valid number");
+    sc2.nextLine();
+}
+//2sdafd
+z=sc2.nextInt();
+table1.setNumberOfChairs(z);
+
+
+    System.out.println("Number of persons are " + table1.getNumberOfChairs());
+
+
+
+
+
+
+
         reservation1.setGuest(geust1);
         reservation1.setTable(table1);
         Scanner sc3 = new Scanner(System.in);
