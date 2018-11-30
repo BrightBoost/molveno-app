@@ -1,4 +1,7 @@
-package hotel;
+package hotel.Payment;
+
+import hotel.Guest.Guest;
+import hotel.Room.RoomType;
 
 import java.util.Date;
 

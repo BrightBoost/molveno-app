@@ -1,4 +1,4 @@
-package hotel;
+package hotel.Guest;
 
 public class Guest {
     private String name;

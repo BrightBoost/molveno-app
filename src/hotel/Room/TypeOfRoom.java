@@ -1,4 +1,4 @@
-package hotel;
+package hotel.Room;
 
 public enum TypeOfRoom {
     STANDARD,
