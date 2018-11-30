@@ -1,4 +1,4 @@
-package restaurant;
+package restaurant.Reservation;
 
 public class Table {
     private long id;

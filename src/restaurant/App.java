@@ -1,5 +1,8 @@
 package restaurant;
 
+import restaurant.Reservation.Reservation;
+import restaurant.Reservation.Table;
+
 import java.util.Scanner;
 
 public class  App {
@@ -29,7 +32,7 @@ public class  App {
         Scanner sc3 = new Scanner(System.in);
         System.out.println("Enter date and time:");
         String t = sc3.nextLine();
-        reservation1.setReservationTime(t);
+       // reservation1.setReservationTime(t);
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("We have made a reservation for you: " + "\nName:    " +reservation1.getGuest().getName() + "\nPhone:  " +reservation1.getGuest().getMobileNumber());
         System.out.println("Number of persons:  " + reservation1.getTable().getNumberOfChairs()+ "\nDate and Time:    " + reservation1.getReservationTime());

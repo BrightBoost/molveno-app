@@ -1,5 +1,7 @@
 package restaurant;
 
+import restaurant.Reservation.Table;
+
 public class Order {
     private long id;
     private Dish dish;
