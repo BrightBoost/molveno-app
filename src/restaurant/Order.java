@@ -4,11 +4,36 @@ import restaurant.Reservation.Table;
 
 public class Order {
     private long id;
-    private Dish dish;
-    private Drink drink;
+    private List<Dish> dishes;
+    private Drink[] drinks;
     private double totalPrice;
     private Table table;
     private Guest guest;
+    private List<Comstumization> comstumizations;
+
+    public List<Dish> getDishes() {
+        return dishes;
+    }
+
+    public void setDishes(List<Dish> dishes) {
+        this.dishes = dishes;
+    }
+
+    public Drink[] getDrinks() {
+        return drinks;
+    }
+
+    public void setDrinks(Drink[] drinks) {
+        this.drinks = drinks;
+    }
+
+    public List<Comstumization> getComstumizations() {
+        return comstumizations;
+    }
+
+    public void setComstumizations(List<Comstumization> comstumizations) {
+        this.comstumizations = comstumizations;
+    }
 
     public long getId() {
         return id;
@@ -57,4 +82,6 @@ public class Order {
     public void setGuest(Guest guest) {
         this.guest = guest;
     }
+
+
 }
