@@ -1,9 +1,24 @@
 package restaurant;
 
-public class Ingredients {
+public class Ingredient {
     private long id;
     private String ingredientsName;
-    private double price;
+    private double priceIngredients;
+
+
+
+
+
+
+
+
+    public double getPriceIngredients() {
+        return priceIngredients;
+    }
+
+    public void setPriceIngredients(double priceIngredients) {
+        this.priceIngredients = priceIngredients;
+    }
 
     public long getId() {
         return id;
@@ -21,11 +36,15 @@ public class Ingredients {
         this.ingredientsName = ingredientsName;
     }
 
-    public double getPrice() {
-        return price;
+
+
+
+
+
+
+
+
+
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-}
+
