@@ -1,15 +1,16 @@
 package hotel;
 
-public class RoomType {
-    private String type;
-    private double price;
-    private int size;
+import java.util.Scanner;
 
-    public String getType() {
+public class RoomType {
+    private TypeOfRoom type;
+    private double price;
+
+    public TypeOfRoom getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(TypeOfRoom type) {
         this.type = type;
     }
 
@@ -21,11 +22,4 @@ public class RoomType {
         this.price = price;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }
