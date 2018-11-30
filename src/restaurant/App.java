@@ -1,5 +1,7 @@
 package restaurant;
 
+import general.Validation;
+
 import com.sun.deploy.util.ArrayUtil;
 
 import java.util.ArrayList;
@@ -18,6 +20,28 @@ public class  App {
         Reservation reservation1 = new Reservation();
         Guest geust1 = new Guest();
         Table table1 = new Table() ;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String x = sc.nextLine();
+         geust1.setName(x);
+        System.out.println("The name is " + geust1.getName());
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("What is your telephone number ?");
+        String y = sc.nextLine();
+        geust1.setMobileNumber(y);
+        System.out.println("Your telephone number is  "+ geust1.getMobileNumber());
+        String email = "";
+        do {
+            System.out.println("What is your email address?");
+            email = sc.nextLine();
+        }
+        while(!Validation.isValidEmail(email));
+
+        geust1.setEmail(email);
+        System.out.println("Your email  is  "+ geust1.getEmail());
+        Scanner sc2 = new Scanner (System.in);
+
+        int z;
 
 
        // Scanner sc = new Scanner(System.in);
