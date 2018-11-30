@@ -2,24 +2,37 @@ package hotel.Room;
 
 import java.util.Scanner;
 
+
 public class RoomType {
-    private TypeOfRoom type;
-    private double price;
+    private final String budget = "Budget";
+    private final String standard = "Standard";
+    private final String luxury = "Luxury";
 
-    public TypeOfRoom getType() {
-        return type;
+    private final double budgetPrice = 80.00;
+    private final double standardPrice = 100.00;
+    private final double luxuryPrice = 140.00;
+
+    public String getBudget() {
+        return budget;
     }
 
-    public void setType(TypeOfRoom type) {
-        this.type = type;
+    public String getStandard() {
+        return standard;
     }
 
-    public double getPrice() {
-        return price;
+    public String getLuxury() {
+        return luxury;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public double getBudgetPrice() {
+        return budgetPrice;
     }
 
+    public double getStandardPrice() {
+        return standardPrice;
+    }
+
+    public double getLuxuryPrice() {
+        return luxuryPrice;
+    }
 }

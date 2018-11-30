@@ -66,7 +66,7 @@ public class Bill {
         this.guest = guest;
     }
 
-    public double calculateTotal(){
-        return total = days*roomType.getPrice();
-    }
+//    public double calculateTotal(){
+//        return total = days*roomType.getPrice();
+
 }
