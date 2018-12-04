@@ -1,4 +1,4 @@
-package restaurant.Reservation;
+package Reservation;
 
 import java.time.LocalDateTime;
 import java.util.List;
