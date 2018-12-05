@@ -7,7 +7,7 @@ import restaurant.Reservation.Table;
 public class Order {
     private long id;
     private List<Dish> dishes;
-    private Drink[] drinks;
+    private List<Drink> drinks;
     private double totalPrice;
     private Table table;
     private Guest guest;
@@ -17,13 +17,18 @@ public class Order {
         return dishes;
     }
 
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
+
+    public void setDrinks(List<Drink> drinks) {
+        this.drinks = drinks;
+    }
+
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
 
-    public Drink[] getDrinks() {
-        return drinks;
-    }
 
 
     public List<Comstumization> getComstumizations() {
