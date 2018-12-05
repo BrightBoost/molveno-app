@@ -1,21 +1,22 @@
-package restaurant;
+package restaurant.Reservation;
 
-import java.sql.Timestamp;
+import restaurant.Guest;
+
+import java.time.LocalDateTime;
 
 public class Reservation {
     private long id;
+    private LocalDateTime reservationTime;
+    private Guest guest;
+    private Table table;
 
-    public String getReservationTime() {
+    public LocalDateTime getReservationTime() {
         return reservationTime;
     }
 
-    public void setReservationTime(String reservationTime) {
+    public void setReservationTime(LocalDateTime reservationTime) {
         this.reservationTime = reservationTime;
     }
-
-    private String reservationTime;
-    private Guest guest;
-    private Table table;
 
     public long getId() {
         return id;

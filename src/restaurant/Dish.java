@@ -1,11 +1,22 @@
 package restaurant;
 
+import java.util.List;
+
 public class Dish {
     private long id;
     private String dishName;
-    private double price;
+    private double dishPrice;
     // create an array of ingredients
-    private Ingredients ingredients;
+    private List<Ingredient> ingredients;
+
+
+    public double getDishPrice() {
+        return dishPrice;
+    }
+
+    public void setDishPrice(double dishPrice) {
+        this.dishPrice = dishPrice;
+    }
 
     public long getId() {
         return id;
@@ -24,18 +35,40 @@ public class Dish {
     }
 
     public double getPrice() {
-        return price;
+        return dishPrice;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.dishPrice = price;
     }
 
-    public Ingredients getIngredients() {
+    public List<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Ingredients ingredients) {
+    public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
-}
+
+    //public  void dishprice(){
+        //dishPrice= ingredients.getPriceIngredients() + ingredients.getExtraPriceIngredients();
+
+
+
+       // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
