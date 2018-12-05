@@ -4,11 +4,14 @@ import hotel.Booking.Booking;
 import hotel.Guest.Guest;
 import hotel.Room.Room;
 
-import java.awt.print.Book;
+    import java.awt.print.Book;
+    import java.text.DateFormat;
     import java.text.ParseException;
     import java.text.SimpleDateFormat;
+    import java.time.LocalDate;
+    import java.time.Period;
     import java.util.Date;
-import java.util.Scanner;
+    import java.util.Scanner;
 
 
 public class Test {
@@ -33,61 +36,39 @@ public class Test {
         */
         System.out.println("Welcome to the Molveno Hotel Portal!");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the Check-In Date: ");
+        System.out.println("Enter the Check-In Date:  (dd-MM-yyyy)");
 
         String checkIn = scanner.nextLine();
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-        Date date2=null;
-        try {
-            //Parsing the String
-            date2 = dateFormat.parse(checkIn);
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        System.out.println(date2);
 
-        System.out.println("Enter the Check-Out Date: ");
+        LocalDate date2 = null;
+
+        //Parsing the String
+        date2 = LocalDate.parse(checkIn);//dateFormat.parse(checkIn);
+
+        System.out.println(date2);
+        System.out.println("Enter the Check-Out Date: (dd-MM-yyyy) ");
 
         String checkOut = scanner.nextLine();
 
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-        Date date3=null;
-        try {
-            //Parsing the String
-            date3 = dateFormat.parse(checkOut);
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        LocalDate date3=null;
+
+        date3 = LocalDate.parse(checkOut);
+
         System.out.println(date3);
 
-//        String choice = scan.nextLine();
-//        if (choice.equalsIgnoreCase("y")) {//only takes y or Y
-//            // get input from user
-//            choice = scan.nextLine();
-//            System.out.println();
-//            System.out.println("Enter The Room Type: " );
-//            Scanner scanner = new Scanner(System.in);
-//            String TypeOfRoom = scanner.nextLine();
-//            System.out.println("Enter The Room Price: ");
-//            Double PriceOfRoom = scanner.nextDouble();
-//            System.out.println("The room type is " + TypeOfRoom +" & the room price is: "+PriceOfRoom);
-//        } else {
+        System.out.println(Period.between(date2, date3));
+
+        System.out.println();
+
             System.out.println( "Enter your full name: " );
-          //  Scanner scanner = new Scanner(System.in);
             String name = scanner.nextLine();
             System.out.println( "Email: " );
-            //Scanner email = new Scanner(System.in);
             String email = scanner.nextLine();
             System.out.println( "Phone Number: " );
-           //Scanner phone = new Scanner(System.in);
             String phoneNumber = scanner.nextLine();
         }
-       // Date date = new Date();
-      //  System.out.println(date.toString());
-        //System.out.println(" " + +" "+);
+
 
         Guest guest = new Guest();
 
