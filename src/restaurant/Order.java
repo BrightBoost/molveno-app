@@ -23,9 +23,6 @@ public class Order {
         return drinks;
     }
 
-    public void setDrinks(Drink[] drinks) {
-        this.drinks = drinks;
-    }
 
     public List<Comstumization> getComstumizations() {
         return comstumizations;
