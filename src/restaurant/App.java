@@ -8,8 +8,13 @@ import general.Validation;
 
 import com.sun.deploy.util.ArrayUtil;
 import restaurant.Reservation.Reservation;
+import restaurant.Reservation.ReservationLogic;
 import restaurant.Reservation.Table;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -25,7 +30,7 @@ public class  App {
         System.out.println("Welcome to Molveno Restaurant");
         Reservation reservation1 = new Reservation();
         Guest geust1 = new Guest();
-        Table table1 = new Table() ;
+        Table table11 = new Table() ;
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
         String x = sc.nextLine();
@@ -76,6 +81,60 @@ public class  App {
 
 
         System.out.println(OrderLogic.calculateTotalprice(order));
+
+
+
+        LocalDate date = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time = LocalTime.of(10, 0);
+
+        LocalDateTime ReservationRequest = LocalDateTime.of(date, time);
+        System.out.println("ReservationRequest is "+ReservationRequest);
+
+        LocalDate date1 = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time1 = LocalTime.of(12, 0);
+
+        LocalDateTime Reservation1 = LocalDateTime.of(date1, time1);
+
+        LocalDate date2 = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time2 = LocalTime.of(23, 0);
+
+        LocalDateTime Reservation2 = LocalDateTime.of(date2, time2);
+
+        List<LocalDateTime> current = new ArrayList<>();
+        current.add(Reservation1);
+        current.add(Reservation2);
+        System.out.println("current is  "+ current);
+
+         System.out.println(ReservationLogic.checkDateTime(ReservationRequest,current));
+
+        Table table1 = new Table();
+        table1.setId(1);
+        table1.setNumberOfChairs(4);
+        Table table2 = new Table();
+        table2.setId(2);
+        table2.setNumberOfChairs(6);
+        Table table4 = new Table();
+        table4.setId(4);
+        table4.setNumberOfChairs(8);
+        Table table3 = new Table();
+        table3.setId(3);
+        table3.setNumberOfChairs(8);
+
+
+        List <Table> reserevedTables = new ArrayList<>();
+        reserevedTables.add(table1);
+        reserevedTables.add(table2);
+        reserevedTables.add(table4);
+
+        boolean available = ReservationLogic.checkTable(6,reserevedTables);
+        System.out.println(available);
+
 
 
 

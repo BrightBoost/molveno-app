@@ -3,7 +3,6 @@ package restaurant.Reservation;
 public class Table {
     private long id;
     private int numberOfChairs;
-    //private  tableAvailable;
     public int getNumberOfChairs() {
         return numberOfChairs;
     }
