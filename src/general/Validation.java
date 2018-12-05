@@ -11,7 +11,7 @@ public class Validation
                 "A-Z]{2,7}$";
 
         Pattern pat = Pattern.compile(emailRegex);
-       // System.out.println(pat.toString());
+        System.out.println(pat.toString());
         if (email == null)
             return false;
         return pat.matcher(email).matches();

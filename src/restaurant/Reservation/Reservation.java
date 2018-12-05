@@ -3,20 +3,27 @@ package restaurant.Reservation;
 import restaurant.Guest;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Reservation {
     private long id;
-    private LocalDateTime reservationTime;
+    private LocalDateTime ReservationsTime;
     private Guest guest;
     private Table table;
 
-    public LocalDateTime getReservationTime() {
-        return reservationTime;
+
+
+    public LocalDateTime getReservationsTime() {
+        return ReservationsTime;
     }
 
-    public void setReservationTime(LocalDateTime reservationTime) {
-        this.reservationTime = reservationTime;
+    public void setReservationsTime(LocalDateTime reservationsTime) {
+        ReservationsTime = reservationsTime;
     }
+
+
+
+
 
     public long getId() {
         return id;
