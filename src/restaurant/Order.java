@@ -1,11 +1,13 @@
 package restaurant;
 
 import restaurant.Reservation.Table;
+import java.util.List;
+import restaurant.Reservation.Table;
 
 public class Order {
     private long id;
     private List<Dish> dishes;
-    private Drink[] drinks;
+    private List<Drink> drinks;
     private double totalPrice;
     private Table table;
     private Guest guest;
@@ -15,17 +17,19 @@ public class Order {
         return dishes;
     }
 
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
+
+    public void setDrinks(List<Drink> drinks) {
+        this.drinks = drinks;
+    }
+
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
 
-    public Drink[] getDrinks() {
-        return drinks;
-    }
 
-    public void setDrinks(Drink[] drinks) {
-        this.drinks = drinks;
-    }
 
     public List<Comstumization> getComstumizations() {
         return comstumizations;
@@ -41,22 +45,6 @@ public class Order {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public Dish getDish() {
-        return dish;
-    }
-
-    public void setDish(Dish dish) {
-        this.dish = dish;
-    }
-
-    public Drink getDrink() {
-        return drink;
-    }
-
-    public void setDrink(Drink drink) {
-        this.drink = drink;
     }
 
     public double getTotalPrice() {
