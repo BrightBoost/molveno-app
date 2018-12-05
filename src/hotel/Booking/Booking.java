@@ -1,4 +1,7 @@
-package hotel;
+package hotel.Booking;
+
+import hotel.Guest.Guest;
+import hotel.Room.Room;
 
 public class Booking {
     private String checkIn;
