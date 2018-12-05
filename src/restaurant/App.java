@@ -3,6 +3,8 @@ package restaurant;
 import general.Validation;
 
 import com.sun.deploy.util.ArrayUtil;
+import restaurant.Reservation.Reservation;
+import restaurant.Reservation.Table;
 
 import java.util.ArrayList;
 import java.util.List;
