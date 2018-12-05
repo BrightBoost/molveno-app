@@ -1,9 +1,14 @@
 package restaurant;
 
 import general.Validation;
+import restaurant.Reservation.Reservation;
+import restaurant.Reservation.ReservationLogic;
+import restaurant.Reservation.Table;
 
-import com.sun.deploy.util.ArrayUtil;
-
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -19,7 +24,7 @@ public class  App {
         System.out.println("Welcome to Molveno Restaurant");
         Reservation reservation1 = new Reservation();
         Guest geust1 = new Guest();
-        Table table1 = new Table() ;
+        Table table11 = new Table() ;
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
         String x = sc.nextLine();
@@ -41,31 +46,9 @@ public class  App {
         System.out.println("Your email  is  "+ geust1.getEmail());
         Scanner sc2 = new Scanner (System.in);
 
-        int z;
 
 
-       // Scanner sc = new Scanner(System.in);
-        //System.out.println("What is your name?");
-        //String x = sc.nextLine();
-        //geust1.setName(x);
-        //System.out.println("The name is " + geust1.getName());
-        //Scanner sc1 = new Scanner(System.in);
-        //System.out.println("What is your telephone number ?");
-        //String y = sc.nextLine();
-        //geust1.setMobileNumber(y);
-        //System.out.println("Your telephone number is  "+ geust1.getMobileNumber());
-        //Scanner sc2 = new Scanner (System.in);
-        //System.out.println ("For how many persons?");
-        //int z = sc2.nextInt();
-        //table1.setNumberOfChairs(z);
-        //System.out.println("Number of persons are " + table1.getNumberOfChairs());
-        //reservation1.setGuest(geust1);
-        //reservation1.setTable(table1);
-        //Scanner sc3 = new Scanner(System.in);
-        //System.out.println("What time do you prefer ?");
-        //String t = sc3.nextLine();
-         //reservation1.setReservationTime(t);
-        //System.out.println("We have made a reservation for " + reservation1.getTable().getNumberOfChairs()+ " presons at " + reservation1.getReservationTime());
+
         comstumization.setEffortPrice(40);
         ingredients1.setPriceIngredients(30);
         List<Ingredient> ingredientlist = new ArrayList<>();
@@ -92,6 +75,58 @@ public class  App {
 
         System.out.println(OrderLogic.calculateTotalprice(order));
 
+
+
+        LocalDate date = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time = LocalTime.of(10, 0);
+
+        LocalDateTime ReservationRequest = LocalDateTime.of(date, time);
+        System.out.println("ReservationRequest is "+ReservationRequest);
+
+        LocalDate date1 = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time1 = LocalTime.of(12, 0);
+
+        LocalDateTime Reservation1 = LocalDateTime.of(date1, time1);
+
+        LocalDate date2 = LocalDate.of(2018, Month.DECEMBER, 05);
+
+
+        LocalTime time2 = LocalTime.of(23, 0);
+
+        LocalDateTime Reservation2 = LocalDateTime.of(date2, time2);
+
+        List<LocalDateTime> current = new ArrayList<>();
+        current.add(Reservation1);
+        current.add(Reservation2);
+        System.out.println("current is  "+ current);
+
+       // System.out.println(ReservationLogic.checkDateTime(ReservationRequest,current));
+
+        Table table1 = new Table();
+        table1.setId(1);
+        table1.setNumberOfChairs(4);
+        Table table2 = new Table();
+        table2.setId(2);
+        table2.setNumberOfChairs(6);
+        Table table4 = new Table();
+        table4.setId(4);
+        table4.setNumberOfChairs(8);
+        Table table3 = new Table();
+        table3.setId(3);
+        table3.setNumberOfChairs(8);
+
+
+        List <Table> reserevedTables = new ArrayList<>();
+        reserevedTables.add(table1);
+        reserevedTables.add(table2);
+        reserevedTables.add(table4);
+
+        boolean available = ReservationLogic.checkTable(6,reserevedTables);
+        System.out.println(available);
 
 
 
