@@ -1,6 +1,6 @@
 package restaurant;
 
-import java.util.List;
+import restaurant.Reservation.Table;
 
 public class Order {
     private long id;
@@ -41,6 +41,22 @@ public class Order {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Dish getDish() {
+        return dish;
+    }
+
+    public void setDish(Dish dish) {
+        this.dish = dish;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
+
+    public void setDrink(Drink drink) {
+        this.drink = drink;
     }
 
     public double getTotalPrice() {
