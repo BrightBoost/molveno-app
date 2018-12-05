@@ -4,6 +4,7 @@ public class Drink {
     private long id;
     private String name;
     private String DrinkType;
+    // drinktype ? arr
     private double price;
 
     public long getId() {

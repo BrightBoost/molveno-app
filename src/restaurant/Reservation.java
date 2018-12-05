@@ -4,7 +4,16 @@ import java.sql.Timestamp;
 
 public class Reservation {
     private long id;
-    private Timestamp reservationTime;
+
+    public String getReservationTime() {
+        return reservationTime;
+    }
+
+    public void setReservationTime(String reservationTime) {
+        this.reservationTime = reservationTime;
+    }
+
+    private String reservationTime;
     private Guest guest;
     private Table table;
 
@@ -16,13 +25,6 @@ public class Reservation {
         this.id = id;
     }
 
-    public Timestamp getReservationTime() {
-        return reservationTime;
-    }
-
-    public void setReservationTime(Timestamp reservationTime) {
-        this.reservationTime = reservationTime;
-    }
 
     public Guest getGuest() {
         return guest;

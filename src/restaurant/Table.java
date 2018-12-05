@@ -2,14 +2,14 @@ package restaurant;
 
 public class Table {
     private long id;
-    private int size;
+    private int numberOfChairs;
     //private  tableAvailable;
-    public int getSize() {
-        return size;
+    public int getNumberOfChairs() {
+        return numberOfChairs;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setNumberOfChairs(int numberOfChairs) {
+        this.numberOfChairs = numberOfChairs;
     }
 
 
