@@ -2,10 +2,13 @@ package restaurant;
 
 public class DishLogic {
 
+    /**
+     *  Dish price for the chef
+     * @param dish
+     * @return
+     */
     public static double calculateDishprice(Dish dish) {
-        //get price of all all dishes together
-        //get price of all drinks together
-        //get price of all customizations together
+
         double total = 0;
 
         for (Ingredient ingredient : dish.getIngredients()) {

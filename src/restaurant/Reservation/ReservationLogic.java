@@ -5,7 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservationLogic {
-
+    /**
+     * check reservation based on user request datetime and current reservation , table
+     * @param reservationRequest
+     * @param currentReservations
+     * @param table
+     * @return
+     */
     public static boolean checkDateTime(LocalDateTime reservationRequest, List<Reservation> currentReservations, Table table) {
         long tableId = table.getId();
 
@@ -24,8 +30,15 @@ public class ReservationLogic {
         return true;
     }
 
+    /**
+     * check available table based on user request(datetime) and tables, reservation
+     * adds not reserved tables in table object
+     * @param reservationRequest
+     * @param tables
+     * @param reservations
+     * @return
+     */
     public static List<Table> getAvailableTables(LocalDateTime reservationRequest, List<Table> tables, List<Reservation> reservations) {
-
         List<Table> availableTables = new ArrayList<>();
         for (Table table : tables) {
             if (checkDateTime(reservationRequest, reservations, table)) {
@@ -33,6 +46,7 @@ public class ReservationLogic {
                 System.out.println(table.getId());
             }
         }
+
         return availableTables;
 
     }
