@@ -4,6 +4,7 @@ public class Guest {
     private long id;
     private String name;
     private String mobileNumber;
+    private String email;
 
     public long getId() {
         return id;
@@ -11,6 +12,14 @@ public class Guest {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {

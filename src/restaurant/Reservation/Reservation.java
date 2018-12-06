@@ -1,12 +1,29 @@
-package restaurant;
+package restaurant.Reservation;
 
-import java.sql.Timestamp;
+import restaurant.Guest;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class Reservation {
     private long id;
-    private Timestamp reservationTime;
+    private LocalDateTime ReservationsTime;
     private Guest guest;
     private Table table;
+
+
+
+    public LocalDateTime getReservationsTime() {
+        return ReservationsTime;
+    }
+
+    public void setReservationsTime(LocalDateTime reservationsTime) {
+        ReservationsTime = reservationsTime;
+    }
+
+
+
+
 
     public long getId() {
         return id;
@@ -16,13 +33,6 @@ public class Reservation {
         this.id = id;
     }
 
-    public Timestamp getReservationTime() {
-        return reservationTime;
-    }
-
-    public void setReservationTime(Timestamp reservationTime) {
-        this.reservationTime = reservationTime;
-    }
 
     public Guest getGuest() {
         return guest;
