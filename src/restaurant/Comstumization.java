@@ -3,7 +3,7 @@ package restaurant;
 public class Comstumization {
 
     private double costumizationPrice;
-   private double effortPrice;
+    private double effortPrice;
     private Ingredient ingredient;
     private Dish dish;
 

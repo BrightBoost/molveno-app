@@ -6,12 +6,6 @@ public class Ingredient {
     private double priceIngredients;
 
 
-
-
-
-
-
-
     public double getPriceIngredients() {
         return priceIngredients;
     }
@@ -37,14 +31,6 @@ public class Ingredient {
     }
 
 
-
-
-
-
-
-
-
-
-    }
+}
 
 

@@ -12,7 +12,6 @@ public class Reservation {
     private Table table;
 
 
-
     public LocalDateTime getReservationsTime() {
         return ReservationsTime;
     }
@@ -20,9 +19,6 @@ public class Reservation {
     public void setReservationsTime(LocalDateTime reservationsTime) {
         ReservationsTime = reservationsTime;
     }
-
-
-
 
 
     public long getId() {

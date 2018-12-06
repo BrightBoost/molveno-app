@@ -40,7 +40,7 @@ public class Bill {
         this.t = t;
     }
 
-    static void generateBill(){
+    static void generateBill() {
         Bill bill = new Bill();
 
         System.out.println();

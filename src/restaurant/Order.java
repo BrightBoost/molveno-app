@@ -1,7 +1,9 @@
 package restaurant;
 
 import restaurant.Reservation.Table;
+
 import java.util.List;
+
 import restaurant.Reservation.Table;
 
 public class Order {
@@ -28,7 +30,6 @@ public class Order {
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
-
 
 
     public List<Comstumization> getComstumizations() {
