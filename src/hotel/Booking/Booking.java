@@ -3,9 +3,12 @@ package hotel.Booking;
 import hotel.Guest.Guest;
 import hotel.Room.Room;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class Booking {
-    private String checkIn;
-    private String checkOut;
+    private LocalDate checkIn;
+    private LocalDate checkOut;
     private Room room;
     private Guest guest;
 
@@ -25,21 +28,20 @@ public class Booking {
         this.guest = guest;
     }
 
-    public String getCheckIn() {
+    public LocalDate getCheckIn(LocalDate date2) {
         return checkIn;
     }
 
-    public void setCheckIn(String checkIn) {
+    public void setCheckIn(LocalDate checkIn) {
         this.checkIn = checkIn;
     }
 
-    public String getCheckOut() {
+    public LocalDate getCheckOut() {
         return checkOut;
     }
 
-    public void setCheckOut(String checkOut) {
+    public void setCheckOut(LocalDate checkOut) {
         this.checkOut = checkOut;
     }
-
 
 }
