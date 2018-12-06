@@ -1,14 +1,13 @@
 package restaurant;
-import Reservation.Reservation;
-import Reservation.ReservationLogic;
-import Reservation.Table;
+
+import restaurant.Reservation.Reservation;
+import restaurant.Reservation.ReservationLogic;
+import restaurant.Reservation.Table;
 
 
 import general.Validation;
 
-import com.sun.deploy.util.ArrayUtil;
 import restaurant.Reservation.Reservation;
-import restaurant.Reservation.ReservationLogic;
 import restaurant.Reservation.Table;
 
 import java.time.LocalDate;
@@ -17,41 +16,42 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListResourceBundle;
 import java.util.Scanner;
 
-public class  App {
-    public static void main (String[] args){
-        Dish dish1= new Dish();
+public class App {
+    public static void main(String[] args) {
+        Dish dish1 = new Dish();
         Ingredient ingredients1 = new Ingredient();
-        Comstumization comstumization= new Comstumization();
+        Comstumization comstumization = new Comstumization();
         Order order = new Order();
 
 
-        System.out.println("Welcome to Molveno Restaurant");
+       System.out.println("Welcome to Molveno Restaurant");
         Reservation reservation1 = new Reservation();
         Guest geust1 = new Guest();
-        Table table11 = new Table() ;
+       // Table table11 = new Table();
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
         String x = sc.nextLine();
-         geust1.setName(x);
+        geust1.setName(x);
         System.out.println("The name is " + geust1.getName());
         Scanner sc1 = new Scanner(System.in);
         System.out.println("What is your telephone number ?");
         String y = sc.nextLine();
         geust1.setMobileNumber(y);
-        System.out.println("Your telephone number is  "+ geust1.getMobileNumber());
+        System.out.println("Your telephone number is  " + geust1.getMobileNumber());
         String email = "";
         do {
             System.out.println("What is your email address?");
             email = sc.nextLine();
 
         }
-        while(!Validation.isValidEmail(email));
+        while (!Validation.isValidEmail(email));
 
         geust1.setEmail(email);
-        System.out.println("Your email  is  "+ geust1.getEmail());
-        Scanner sc2 = new Scanner (System.in);
+        System.out.println("Your email  is  " + geust1.getEmail());
+        Scanner sc2 = new Scanner(System.in);
 
         int z;
 
@@ -68,7 +68,6 @@ public class  App {
         dish1.setDishPrice(DishLogic.calculateDishprice(dish1));
 
 
-
         List<Dish> dishes = new ArrayList<>();
         dishes.add(dish1);
 
@@ -83,19 +82,18 @@ public class  App {
         System.out.println(OrderLogic.calculateTotalprice(order));
 
 
-
         LocalDate date = LocalDate.of(2018, Month.DECEMBER, 05);
 
 
-        LocalTime time = LocalTime.of(10, 0);
+        LocalTime time = LocalTime.of(21, 0);
 
         LocalDateTime ReservationRequest = LocalDateTime.of(date, time);
-        System.out.println("ReservationRequest is "+ReservationRequest);
+        System.out.println("ReservationRequest is " + ReservationRequest);
 
         LocalDate date1 = LocalDate.of(2018, Month.DECEMBER, 05);
 
 
-        LocalTime time1 = LocalTime.of(12, 0);
+        LocalTime time1 = LocalTime.of(10, 0);
 
         LocalDateTime Reservation1 = LocalDateTime.of(date1, time1);
 
@@ -109,9 +107,9 @@ public class  App {
         List<LocalDateTime> current = new ArrayList<>();
         current.add(Reservation1);
         current.add(Reservation2);
-        System.out.println("current is  "+ current);
+        System.out.println("current is  " + current);
 
-         System.out.println(ReservationLogic.checkDateTime(ReservationRequest,current));
+        //System.out.println(ReservationLogic.checkDateTime(ReservationRequest, current));
 
         Table table1 = new Table();
         table1.setId(1);
@@ -125,15 +123,30 @@ public class  App {
         Table table3 = new Table();
         table3.setId(3);
         table3.setNumberOfChairs(8);
+        //boolean timeAvailable = ReservationLogic.checkDateTime(ReservationRequest, current);
+
+        List<Table> tables = new ArrayList<>();
+        tables.add(table1);
+        tables.add(table2);
+        tables.add(table3);
+        tables.add(table4);
 
 
-        List <Table> reserevedTables = new ArrayList<>();
-        reserevedTables.add(table1);
-        reserevedTables.add(table2);
-        reserevedTables.add(table4);
+        Reservation rese1= new Reservation();
+        rese1.setTable(table1);
+        rese1.setReservationsTime(Reservation1);
 
-        boolean available = ReservationLogic.checkTable(6,reserevedTables);
-        System.out.println(available);
+        Reservation rese2= new Reservation();
+        rese2.setTable(table2);
+        rese2.setReservationsTime(Reservation2);
+        List<Reservation> listReservations = new ArrayList<>();
+
+        listReservations.add(rese1);
+        listReservations.add(rese2);
+
+
+
+      //  System.out.println(ReservationLogic.getAvailableTables(ReservationRequest,tables,listReservations));
 
 
 
