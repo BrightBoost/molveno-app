@@ -51,24 +51,11 @@ public class Dish {
     }
 
     //public  void dishprice(){
-        //dishPrice= ingredients.getPriceIngredients() + ingredients.getExtraPriceIngredients();
+    //dishPrice= ingredients.getPriceIngredients() + ingredients.getExtraPriceIngredients();
 
 
-
-       // }
-
+    // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 

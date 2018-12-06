@@ -23,7 +23,7 @@ public class App {
     public static void main(String[] args) {
         Dish dish1 = new Dish();
         Ingredient ingredients1 = new Ingredient();
-        Comstumization comstumization = new Comstumization();
+        Comstumization comstumization1 = new Comstumization();
         Order order = new Order();
 
 
@@ -56,15 +56,15 @@ public class App {
         int z;
 
 
-        comstumization.setEffortPrice(40);
+        comstumization1.setEffortPrice(40);
         ingredients1.setPriceIngredients(50);
         List<Ingredient> ingredientlist = new ArrayList<>();
         ingredientlist.add(ingredients1);
-        comstumization.setIngredient(ingredients1);
-        comstumization.setDish(dish1);
+        comstumization1.setIngredient(ingredients1);
+        comstumization1.setDish(dish1);
         dish1.setIngredients(ingredientlist);
 
-        comstumization.setCostumizationPrice(ComstumizationLogic.calculateCustomizationPrice(comstumization));
+        comstumization1.setCostumizationPrice(ComstumizationLogic.calculateCustomizationPrice(comstumization1));
         dish1.setDishPrice(DishLogic.calculateDishprice(dish1));
 
 
@@ -72,7 +72,7 @@ public class App {
         dishes.add(dish1);
 
         List<Comstumization> comstumizations = new ArrayList<>();
-        comstumizations.add(comstumization);
+        comstumizations.add(comstumization1);
 
 
         order.setDishes(dishes);

@@ -9,12 +9,11 @@ public class BillController {
         return bill;
     }
 
-    public double calculateTotal(Order order){
+    public double calculateTotal(Order order) {
         double total = 0;
 
         //all dishes, drinks, customs
-        for(Dish d : order.getDishes())
-        {
+        for (Dish d : order.getDishes()) {
             total = total + d.getPrice();
         }
 
@@ -22,16 +21,12 @@ public class BillController {
         {
             total = total + order.getDishes().get(i).getPrice();
         }*/
-        for(Drink d : order.getDrinks())
-        {
+        for (Drink d : order.getDrinks()) {
             total = total + d.getPrice();
         }
-        for( Comstumization c  : order.getComstumizations())
-        {
+        for (Comstumization c : order.getComstumizations()) {
             total = total + c.getCostumizationPrice();
         }
-
-
 
 
         return total;
