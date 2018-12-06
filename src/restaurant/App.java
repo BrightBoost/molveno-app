@@ -54,13 +54,14 @@ public class App {
         Scanner sc2 = new Scanner(System.in);
 
         int z;
+Ingredient ingredient2 = new Ingredient();
+ingredient2.setPriceIngredients(10);
 
-
-        comstumization1.setEffortPrice(40);
+        comstumization1.setEffortPrice(3);
         ingredients1.setPriceIngredients(50);
         List<Ingredient> ingredientlist = new ArrayList<>();
         ingredientlist.add(ingredients1);
-        comstumization1.setIngredient(ingredients1);
+        comstumization1.setIngredient(ingredient2);
         comstumization1.setDish(dish1);
         dish1.setIngredients(ingredientlist);
 
@@ -146,7 +147,7 @@ public class App {
 
 
 
-      //  System.out.println(ReservationLogic.getAvailableTables(ReservationRequest,tables,listReservations));
+        System.out.println(ReservationLogic.getAvailableTables(ReservationRequest,tables,listReservations));
 
 
 
