@@ -86,7 +86,7 @@ ingredient2.setPriceIngredients(10);
         LocalDate date = LocalDate.of(2018, Month.DECEMBER, 05);
 
 
-        LocalTime time = LocalTime.of(21, 0);
+        LocalTime time = LocalTime.of(17, 0);
 
         LocalDateTime ReservationRequest = LocalDateTime.of(date, time);
         System.out.println("ReservationRequest is " + ReservationRequest);
@@ -158,8 +158,8 @@ Reservation reservation3 = new Reservation();
         System.out.println(ReservationLogic.getAvailableTables(ReservationRequest,tables,listReservations));
 
 ReservationLogic.cancel(reservation3,listReservations);
-        ReservationLogic.cancel(rese1,listReservations);
-        ReservationLogic.cancel(rese2,listReservations);
+     //   ReservationLogic.cancel(rese1,listReservations);
+       // ReservationLogic.cancel(rese2,listReservations);
      //   ReservationLogic.cancel(r,listReservations);
 
 
