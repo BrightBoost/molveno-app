@@ -3,22 +3,19 @@ package hotel;
 import hotel.Booking.Booking;
 import hotel.Guest.Guest;
 import hotel.Room.Room;
-
+import restaurant.Reservation.Reservation;
+import restaurant.Reservation.Table;
 
 import java.awt.print.Book;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.Date;
-import java.util.Scanner;
-
+import java.time.*;
+import java.util.*;
 import java.util.Scanner;
 import java.util.Date;
 
-
-public class Test {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -73,23 +70,76 @@ public class Test {
         String country = scanner.nextLine();
 
         System.out.println("Nationality: ");
-        String nnationality = scanner.nextLine();
+        String nationality = scanner.nextLine();
 
-        Guest guest = new Guest();
-        guest.setName(name);
-        guest.setEmail(email);
-        guest.setPhone(phoneNumber);
-        guest.setAddress(address);
-        guest.setCountry(country);
-        guest.setNationality(nnationality);
+        Guest guestInfo = new Guest();
+        guestInfo.setName(name);
+        guestInfo.setEmail(email);
+        guestInfo.setPhone(phoneNumber);
+        guestInfo.setAddress(address);
+        guestInfo.setCountry(country);
+        guestInfo.setNationality(nationality);
 
-        }
         Date date = new Date();
         // display time and date using toString()
         System.out.println(date.toString());
 
-        Room room = new Room();
-    }
 
+        LocalDate BookingRequest = LocalDate.of(2018, Month.DECEMBER, 05);
+        System.out.println("ReservationRequest is " + BookingRequest);
+
+
+        LocalDate checkInDate = LocalDate.of(2018, Month.DECEMBER, 05);
+        //LocalDate Booking1 = LocalDate.of(checkInDate);
+
+        LocalDate checkOutDate = LocalDate.of(2018, Month.DECEMBER, 06);
+
+        //LocalDate Booking2 = LocalDate.of(checkOutDate);
+
+        List<LocalDate> current = new ArrayList<>();
+        //current.add(Booking1);
+        //current.add(Booking2);
+
+        System.out.println("current is  " + current);
+
+        //System.out.println(ReservationLogic.checkDateTime(ReservationRequest, current));
+
+        Room room1 = new Room();
+        room1.setId(1);
+
+        Room room2 = new Room();
+        room2.setId(2);
+
+        Room room3 = new Room();
+        room3.setId(3);
+
+        Room room4 = new Room();
+        room4.setId(4);
+
+        //boolean timeAvailable = ReservationLogic.checkDateTime(ReservationRequest, current);
+
+        List<Room> rooms = new ArrayList<>();
+        rooms.add(room1);
+        rooms.add(room2);
+        rooms.add(room3);
+        rooms.add(room4);
+
+        System.out.println(rooms);
+
+        Booking rese1= new Booking();
+        rese1.setRoom(room1);
+       // rese1.setCheckIn(Booking1);
+
+        Booking rese2= new Booking();
+        rese2.setRoom(room2);
+        //rese2.setCheckIn(Booking2);
+        List<Booking> listBookings = new ArrayList<>();
+
+        listBookings.add(rese1);
+        listBookings.add(rese2);
+
+
+    }
+}
 
 

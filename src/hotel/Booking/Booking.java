@@ -4,13 +4,23 @@ import hotel.Guest.Guest;
 import hotel.Room.Room;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.time.LocalDateTime;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 public class Booking {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private Room room;
     private Guest guest;
+
+    public LocalDate getCheckIn() {
+        return checkIn;
+    }
 
     public Room getRoom() {
         return room;
