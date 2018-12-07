@@ -34,14 +34,6 @@ public class Dish {
         this.dishName = dishName;
     }
 
-    public double getPrice() {
-        return dishPrice;
-    }
-
-    public void setPrice(double price) {
-        this.dishPrice = price;
-    }
-
     public List<Ingredient> getIngredients() {
         return ingredients;
     }

@@ -17,7 +17,7 @@ public class OrderLogic {
 
         if (order.getDishes() != null) {
             for (Dish dish : order.getDishes()) {
-                total = total + dish.getPrice();
+                total = total + dish.getDishPrice();
             }
         }
 
